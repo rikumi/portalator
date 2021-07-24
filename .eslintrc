@@ -1,11 +1,11 @@
 {
-  // "extends": [
-  //   "@tencent/eslint-config-tencent",
-  //   "@tencent/eslint-config-tencent/ts"
-  // ],
+  "extends": [
+    "plugin:react-hooks/recommended"
+  ],
   "plugins": [
     "@typescript-eslint",
-    "eslint-plugin-import"
+    "eslint-plugin-import",
+    "eslint-plugin-react-hooks"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -31,17 +31,6 @@
       "never"
     ],
     "array-callback-return": "warn",
-    "arrow-body-style": [
-      "warn",
-      "as-needed"
-    ],
-    "arrow-parens": [
-      "warn",
-      "as-needed",
-      {
-        "requireForBlockBody": true
-      }
-    ],
     "arrow-spacing": "warn",
     "block-spacing": "error",
     "brace-style": "error",
@@ -373,13 +362,6 @@
     "@typescript-eslint/class-literal-property-style": [
       "error",
       "fields"
-    ],
-    "@typescript-eslint/consistent-type-assertions": [
-      "error",
-      {
-        "assertionStyle": "as",
-        "objectLiteralTypeAssertions": "never"
-      }
     ],
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/explicit-member-accessibility": "warn",
