@@ -2,28 +2,47 @@
   "name": "portalator",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "src/index.ts",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "rm -rf docs; parcel build index.html --public-url /portalator/ --dist-dir docs"
+    "dev": "cross-env NODE_ENV=development webpack",
+    "build": "cross-env NODE_ENV=production webpack"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-less": "^2.0.0-beta.3",
+    "@babel/core": "^7.14.8",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.8",
+    "@babel/preset-react": "^7.14.5",
     "@types/react": "^17.0.15",
     "@types/react-dom": "^17.0.9",
     "@typescript-eslint/eslint-plugin": "^4.28.4",
     "@typescript-eslint/parser": "^4.28.4",
+    "autoprefixer": "^10.3.1",
+    "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.2.0",
     "eslint": "^7.31.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "parcel": "^2.0.0-beta.3.1"
+    "html-webpack-plugin": "^5.3.2",
+    "less": "^4.1.1",
+    "less-loader": "^10.0.1",
+    "mini-css-extract-plugin": "^2.1.0",
+    "postcss": "^8.3.6",
+    "postcss-loader": "^6.1.1",
+    "style-loader": "^3.2.1",
+    "ts-loader": "^9.2.4",
+    "webpack": "^5.46.0",
+    "webpack-cli": "^4.7.2"
   },
   "dependencies": {
     "react": "^17.0.2",
     "react-digraph": "^8.0.0-beta.7",
     "react-dom": "^17.0.2",
     "typescript": "^3.7.5"
-  }
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }

@@ -1,0 +1,115 @@
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/less-loader/dist/cjs.js!./src/style/index.less ***!
+  \*****************************************************************************************************************************************************************************************************************/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+html {
+  background-color: #212121;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #f1f5f8;
+  font-size: 1vw;
+}
+body {
+  font-size: 15px;
+  line-height: 1.55em;
+}
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 8px;
+  }
+}
+#app {
+  width: 100%;
+  height: 100%;
+  padding: 30px 0;
+  box-sizing: border-box;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.portalator {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.portalator-title {
+  font-size: 24px;
+  text-align: center;
+  margin: 11rem 0 8rem;
+  text-shadow: 0 -2px 0 rgba(0, 0, 0, 0.5);
+}
+.portalator-intro {
+  font-size: 14px;
+  margin: 0 23rem 10px;
+  text-align: justify;
+}
+.portalator-top {
+  margin: 20px 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.portalator-top > * + * {
+  margin-left: 20px;
+}
+.portalator-bottom {
+  flex: 1 1 0;
+}
+.portalator-bottom .view-wrapper {
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.3);
+  width: auto;
+  margin: 0 30px;
+}
+.portalator-coord-list {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px 15px 15px;
+  border-radius: 6px;
+}
+.portalator-coord-list-name {
+  margin: 0 0 10px;
+}
+.portalator-coord-list-item,
+.portalator-coord-list-add {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.portalator-coord-list-item-input,
+.portalator-coord-list-add-input {
+  width: auto;
+  flex: 1 1 0;
+  min-width: 0;
+  margin-right: 3px;
+  padding: 5px 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid #9f434c;
+  border-radius: 2px;
+  color: #ffffff;
+  outline: none;
+}
+.portalator-coord-list-item button,
+.portalator-coord-list-add button {
+  width: 30px;
+  margin-right: 3px;
+  padding: 5px 8px;
+  background: #9f434c;
+  border-radius: 2px;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  text-transform: uppercase;
+}
+
