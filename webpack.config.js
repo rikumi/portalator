@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   entry: path.resolve(__dirname, 'src/index.ts'),
   output: {
-    path: path.resolve(__dirname, 'docs/index.js'),
+    path: path.resolve(__dirname, 'docs'),
     publicPath: '/portalator/',
   },
   resolve: {
