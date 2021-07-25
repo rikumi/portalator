@@ -37,7 +37,7 @@ const CoordinateListItem: React.FC<CoordinateListItemProps> = (props) => {
       className="portalator-coord-list-item-button-delete"
       onClick={onDelete}
     >
-      Delete
+      -
     </button>
   </div>;
 };

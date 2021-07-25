@@ -41,7 +41,7 @@ const CoordinateListAdd: React.FC<CoordinateListAddProps> = (props) => {
       className="portalator-coord-list-add-button-add"
       onClick={handleConfirm}
     >
-      Add
+      +
     </button>
   </div>;
 };

@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html --public-url /portalator/ -d dist"
+    "build": "rm -rf docs; parcel build index.html --public-url /portalator/ --dist-dir docs"
   },
   "author": "",
   "license": "ISC",
@@ -18,10 +18,11 @@
     "eslint": "^7.31.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "parcel": "^2.0.0-beta.3"
+    "parcel": "^2.0.0-beta.3.1"
   },
   "dependencies": {
     "react": "^17.0.2",
+    "react-digraph": "^8.0.0-beta.7",
     "react-dom": "^17.0.2",
     "typescript": "^3.7.5"
   }

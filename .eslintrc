@@ -351,7 +351,6 @@
     "import/no-duplicates": "error",
     "import/no-mutable-exports": "warn",
     "import/no-webpack-loader-syntax": "warn",
-    "import/prefer-default-export": "warn",
     "no-dupe-class-members": "off",
     "no-empty-function": "off",
     "no-invalid-this": "off",

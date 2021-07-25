@@ -7,7 +7,7 @@ const getOrCreateNearestPortal = (
 ): Coordinate => {
   const { x, y, z } = srcPortal;
   const conversionRatio = world === 'nether' ? 1 / 8 : 8;
-  const horizontalDistance = world === 'nether' ? 6 : 128;
+  const horizontalDistance = world === 'nether' ? 16 : 128;
   const verticalDistance = world === 'nether' ? 128 : 256;
   const dstX = Math.floor(x * conversionRatio);
   const dstZ = Math.floor(z * conversionRatio);
@@ -24,7 +24,6 @@ const getOrCreateNearestPortal = (
   return targetPortal;
 };
 
-// eslint-disable-next-line import/prefer-default-export, arrow-body-style
 export const generateGraphData = (overworldPortals: Coordinate[], netherPortals: Coordinate[]) => {
   const vertices = [...overworldPortals, ...netherPortals];
   const edges: { from: number; to: number }[] = [];
@@ -42,5 +41,21 @@ export const generateGraphData = (overworldPortals: Coordinate[], netherPortals:
     edges.push({ from: i, to: vertices.indexOf(nearest) });
   });
 
-  return { vertices, edges };
+  return {
+    nodes: vertices.map(({ x, y, z, world, isGenerated }, index) => {
+      const ratio = world === 'overworld' ? 1 / 8 : 1;
+      return ({
+        id: `${index}`,
+        title: isGenerated ? 'Generated' : `${x},${y},${z}`,
+        x: Math.sqrt((x * x * ratio * ratio) + (z * z * ratio * ratio)) * 50,
+        y: y + (world === 'overworld' ? -1000 : 0),
+        type: world,
+      });
+    }),
+    edges: edges.map(({ from, to }) => ({
+      source: `${from}`,
+      target: `${to}`,
+      type: 'default',
+    })),
+  };
 };
